@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    >
+
+    <!-- Load the toolbar here -->
+    <include
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <!-- Rest of content for the activity -->
+
+
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+
+        >
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="0dp"
+
+            >
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/login_word"
+                android:textSize="20dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:id="@+id/sph"
+                android:textColor="@color/colorAccent"
+                android:layout_centerHorizontal="true" />
+
+            <ImageView android:src="@drawable/taxi_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal" />
+
+
+            <!-- Login progress -->
+            <ProgressBar
+                android:id="@+id/cab_login_progress"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:visibility="gone"
+                android:layout_gravity="center"
+                />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="0dp"
+                android:paddingLeft="24dp"
+                android:paddingRight="24dp"
+                android:id="@+id/cab_login_form">
+
+
+
+                <EditText android:id="@+id/login_user"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/colorAccent"
+                    android:hint="Email" />
+
+                <EditText android:id="@+id/login_pass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_below="@+id/login_user"
+                    android:inputType="textPassword"
+                    android:textColor="@color/colorAccent"
+                    android:hint="Password" />
+
+                <!-- Signup Button -->
+                <Button
+                    android:id="@+id/btnLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorAccent"
+                    android:textColor="#FFF"
+                    android:textSize="18dp"
+                    android:padding="12dp"
+                    android:text="Login"/>
+
+
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_gravity="center"
+                    android:id="@+id/layoutRegLogin"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="not a member?, "
+                        android:textSize="15sp"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="Create account"
+                        android:textColor="@color/colorAccent"
+                        android:textStyle="bold"
+                        android:clickable="true"
+                        android:textSize="15sp"
+                        android:layout_gravity="left"
+                        android:id="@+id/regLogin"
+                        android:layout_marginBottom="5dp"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="0dp"
+                    android:layout_margin="1dp"
+                    android:layout_gravity="center"
+                    android:layout_below="@+id/layoutRegLogin"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="forgot password?"
+                        android:textColor="@color/colorAccent"
+                        android:textStyle="bold"
+                        android:clickable="true"
+                        android:textSize="15sp"
+                        android:layout_gravity="left"
+                        android:id="@+id/forgot"
+                        android:layout_marginBottom="10dp"
+                        />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <com.google.android.gms.ads.AdView
+                xmlns:ads="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/adView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                ads:adSize="SMART_BANNER"
+                ads:adUnitId="ca-app-pub-5527620381143347/8001407719">
+            </com.google.android.gms.ads.AdView>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
+
+
+
+
+

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textColor="#059"
+        android:textSize="30sp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:id="@+id/sph1"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="connecting you to users around"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20sp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_below="@+id/sph1"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>

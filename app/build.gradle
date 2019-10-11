@@ -1,0 +1,103 @@
+apply plugin: 'com.android.application'
+android {
+    signingConfigs {
+        config {
+            keyAlias 'icode'
+            keyPassword '080charly'
+            storeFile file('C:/Users/user/.android/androiddebug.jks')
+            storePassword '080charly'
+        }
+    }
+    compileSdkVersion 25
+    buildToolsVersion "26.0.2"
+    defaultConfig {
+        applicationId "com.lobscab.icode.lobscab"
+        minSdkVersion 19
+        targetSdkVersion 25
+        versionName 'LobsCab 1.1'
+        versionCode 12
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        signingConfig signingConfigs.config
+    }
+    packagingOptions {
+        exclude 'META-INF/NOTICE' // will not include NOTICE file
+        exclude 'META-INF/LICENSE' // will not include LICENSE file
+        // as noted by @Vishnuvathsan you may also need to include
+        // variations on the file name. It depends on your dependencies.
+        // Some other common variations on notice and license file names
+        exclude 'META-INF/notice'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/license'
+        exclude 'META-INF/license.txt'
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        buildType {
+            debuggable true
+            jniDebuggable true
+            signingConfig signingConfigs.config
+        }
+        debug {
+            signingConfig signingConfigs.config
+            jniDebuggable true
+            renderscriptDebuggable true
+        }
+    }
+    // Specifies two flavor dimensions.
+//    flavorDimensions "tier", "minApi"
+    flavorDimensions "lob"
+
+    productFlavors {
+        rel {
+            minSdkVersion 19
+            applicationId 'com.lobscab.icode.lobscab'
+            signingConfig signingConfigs.config
+            targetSdkVersion 25
+            testApplicationId 'com.lobscab.icode.lobscab.test'
+            versionName '1.0'
+            versionCode 12
+            versionNameSuffix 'Lobs 1.1'
+            dimension "lob"
+
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support.test:runner:0.5'
+    compile 'com.android.support:design:25.1.0'
+    //compile 'com.github.bumptech.glide:glide:3.6.1'
+    //compile 'de.hdodenhof:circleimageview:1.3.0'
+    compile 'com.android.support:appcompat-v7:25.1.0'
+    //Googl
+    compile 'com.google.android.gms:play-services-auth:9.8.0'
+    compile 'com.google.android.gms:play-services-location:9.8.0'
+    compile 'com.google.android.gms:play-services-places:9.8.0'
+    compile 'com.google.android.gms:play-services-maps:9.8.0'
+    // Firebase
+    compile 'com.google.firebase:firebase-database:9.8.0'
+    compile 'com.google.firebase:firebase-auth:9.8.0'
+    compile 'com.google.firebase:firebase-ads:9.8.0'
+    compile 'com.google.firebase:firebase-crash:9.8.0'
+    compile 'com.google.firebase:firebase-config:9.8.0'
+    compile 'com.google.firebase:firebase-messaging:9.8.0'
+    //    compile 'com.google.firebase:firebase-appindexing:9.8.0'
+    //   compile 'com.google.firebase:firebase-analytics:9.8.0'*/
+    // Firebase UI
+    compile 'com.firebaseui:firebase-ui-database:0.6.2'
+    compile 'com.google.maps.android:android-maps-utils:0.5'
+    compile 'com.android.support:recyclerview-v7:25.1.0'
+    compile 'com.android.support:cardview-v7:25.1.0'
+    compile 'com.firebase:firebase-client-android:2.5.2+'
+    compile 'com.android.volley:volley:1.0.0'
+    compile 'com.squareup.okhttp3:okhttp:3.4.1'
+}
+apply plugin: 'com.google.gms.google-services'

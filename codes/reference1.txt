@@ -1,0 +1,58 @@
+reference1.addChildEventListener(new ChildEventListener() {
+                @Override
+                public void onChildAdded(DataSnapshot dataSnapshot, String s) {
+                   try{
+                    Map map = dataSnapshot.getValue(Map.class);
+                    String message = map.get("message").toString();
+                    String userName = map.get("user").toString();
+                    String mess_date = map.get("date").toString();
+                       dbHelper.insertChat(message,userName,mess_date);
+                       try{
+                           ArrayList<String> chatList=dbHelper.getChatDetailsByUser();
+                           for (int i = 0; i <chatList.size() ; i++) {
+                             userName=  chatList.get(i).split("--__")[0];
+                              message= chatList.get(i).split("--__")[1];
+                              mess_date= chatList.get(i).split("--__")[2];
+                              if(dbHelper.numberOfRowsChatWit()>0){
+
+                                  if (userName.equals(dbHelper.getDetailsByChatWit().split("--__")[0]) && mess_date.trim().equals(date.trim())) {
+                                      addMessageBox("You:-\n" + message, 1);
+                                  } else if (mess_date.trim().equals(date.trim())) {
+                                      addMessageBox(dbHelper.getDetailsByChatWit().split("--__")[1] + ":-\n" + message, 2);
+                                  }
+                              }else {
+                                  if (userName.equals(UserDetails.username) && mess_date.trim().equals(date.trim())) {
+                                      addMessageBox("You:-\n" + message, 1);
+                                  } else if (mess_date.trim().equals(date.trim())) {
+                                      addMessageBox(UserDetails.chatWith + ":-\n" + message, 2);
+                                  }
+                                  try{
+                                  dbHelper.insertChatWit(UserDetails.username,UserDetails.chatWith,UserDetails.chatWithUni);
+                                  }catch (Exception et){}
+                              }
+                           }
+                       }catch (Exception cxp){}
+
+                }catch (Exception exr){}
+                }
+
+                @Override
+                public void onChildChanged(DataSnapshot dataSnapshot, String s) {
+
+                }
+
+                @Override
+                public void onChildRemoved(DataSnapshot dataSnapshot) {
+
+                }
+
+                @Override
+                public void onChildMoved(DataSnapshot dataSnapshot, String s) {
+
+                }
+
+                @Override
+                public void onCancelled(FirebaseError firebaseError) {
+
+                }
+            });

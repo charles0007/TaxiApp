@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.lobscab.icode.lobscab">
+
+
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="com.javapapers.currentlocationinmap.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS"/>
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/newlogo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+
+        <activity
+            android:name=".Splash"
+            android:noHistory="true"
+            >
+            <intent-filter>
+
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".CabLogin" />
+
+        <activity android:name=".CabReg"/>
+
+        <activity android:name=".MapsNavActivity"/>
+
+        <activity android:name=".Profile"/>
+
+        <activity android:name=".About"/>
+
+        <activity android:name=".ResetPasswordActivity"/>
+        <activity android:name=".Chat" />
+        <activity android:name=".Rate" />
+        <activity android:name=".Payment" />
+        <activity android:name=".WalletCard" />
+
+        <service
+            android:name=".firebase_notification.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <service
+            android:name=".firebase_notification.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCVk1_g_Q_LVMm5fW036-j1pHP6DNfOReg"/>
+        <meta-data android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/logo_sixr" />
+        <!-- Set color used with incoming notification messages. This is used when no color is set for the incoming
+             notification message. See README(https://goo.gl/6BKBk7) for more. -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorPrimaryDark" />
+
+        <!--Include the AdActivity configChanges and theme. -->
+        <activity android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:theme="@android:style/Theme.Translucent" />
+
+    </application>
+
+</manifest>

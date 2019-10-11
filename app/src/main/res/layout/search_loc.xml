@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--android:orientation="vertical" android:layout_width="fill_parent"-->
+    <!--android:layout_height="wrap_content">-->
+
+    <!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+        <!--android:orientation="horizontal" android:layout_width="match_parent"-->
+        <!--android:padding="20dp"-->
+        <!--android:layout_height="wrap_content">-->
+
+        <!--<AutoCompleteTextView-->
+        <!--android:id="@+id/autoCompleteTextView"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:ems="10"-->
+        <!--android:text="Current Location" >-->
+
+        <!--<requestFocus />-->
+
+    <!--</AutoCompleteTextView>-->
+
+    <!--&lt;!&ndash;<EditText&ndash;&gt;-->
+        <!--&lt;!&ndash;android:id="@+id/editText"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_weight="4"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:hint="Search Location Here" />&ndash;&gt;-->
+
+
+    <!--<Button-->
+        <!--android:id="@+id/search_button"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_weight="0.5"-->
+        <!--android:onClick="onMapSearch"-->
+        <!--android:text="Search" />-->
+<!--</LinearLayout>-->
+
+    <android.support.v7.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+
+    android:layout_marginRight="50dp"
+    android:layout_marginLeft="30dp"
+    android:layout_marginTop="100dp"
+        android:layout_height="35dp"
+        android:layout_weight=".335"
+        android:gravity="left"
+        android:textSize="13sp"
+        android:background="@android:color/white"
+        >
+
+        <fragment
+            android:id="@+id/autocomplete_fragment"
+            android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </android.support.v7.widget.CardView>
+
+<!--</LinearLayout>-->

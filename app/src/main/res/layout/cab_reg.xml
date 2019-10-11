@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    >
+
+    <!-- Load the toolbar here -->
+    <include
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    >
+
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="0dp"
+        >
+
+
+        <ImageView android:src="@drawable/taxi_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal" />
+
+        <!-- Login progress -->
+        <ProgressBar
+            android:id="@+id/cab_reg_progress"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/cab_reg_form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="0dp"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp">
+
+
+
+            <EditText android:id="@+id/reg_user"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/colorAccent"
+                android:hint="* Email" />
+
+
+            <EditText android:id="@+id/reg_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:inputType="phone"
+                android:textColor="@color/colorAccent"
+                android:hint="* Phone number" />
+
+            <EditText android:id="@+id/reg_pass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:inputType="textPassword"
+                android:textColor="@color/colorAccent"
+                android:hint="* Password" />
+
+            <EditText android:id="@+id/reg_repass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:textColor="@color/colorAccent"
+                android:inputType="textPassword"
+                android:hint="* Confirm Password" />
+
+
+            <!-- Signup Button -->
+            <Button
+                android:id="@+id/btnCabreg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorAccent"
+                android:textColor="#FFF"
+                android:textSize="18dp"
+                android:padding="12dp"
+                android:text="Create Account"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="0dp"
+                android:layout_margin="10dp"
+                android:layout_gravity="center">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/reg_login"
+                    android:textSize="15sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Login "
+                    android:textColor="@color/colorAccent"
+                    android:textStyle="bold"
+                    android:clickable="true"
+                    android:layout_gravity="left"
+                    android:id="@+id/loginCabreg"
+                    android:textSize="15sp"
+                    android:layout_marginBottom="50dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</ScrollView>
+</LinearLayout>
+
+
+
+
+

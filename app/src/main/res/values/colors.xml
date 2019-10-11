@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="frmcolorPrimary">#3F51B5</color>
+    <color name="frmcolorPrimaryDark">#428bca</color>
+
+    <color name="colorPrimaryDark">#FF408178 </color>
+    <color name="colorPrimary">#FF408199</color>
+    <color name="colorAccent">#FF408178</color>
+    <color name="cancel">#b20e6f</color>
+    <color name="opaque">#33000000</color>
+    <color name="view_bg">#b20e0f</color>
+
+    <color name="btn_bg">#3e4a56</color>
+    <color name="windowBackground">#FFFFFF</color>
+    <color name="navigationBarColor">#000000</color>
+    <color name="frmcolorAccent">#99CCFF</color>
+    <!--<color name="colorAccent">#AB80FF</color>-->
+    <color name="textColorPrimary">#AB80FF</color>
+
+    <color name="cursorAccent">#FFFFFF</color>
+    <color name="controlNormal">#AB80FF</color>
+    <color name="controlActivated">#AB0DFF</color>
+
+    <color name="bg_login">#26ae90</color>
+    <color name="bg_register">#2e3237</color>
+    <color name="bg_main">#428bca</color>
+    <color name="white">#ffffff</color>
+    <color name="input_login">#222222</color>
+    <color name="input_login_hint">#999999</color>
+    <color name="input_register">#888888</color>
+    <color name="input_register_bg">#3b4148</color>
+    <color name="input_register_hint">#5e6266</color>
+    <color name="btn_login">#26ae90</color>
+    <color name="btn_login_bg">#eceef1</color>
+    <color name="lbl_name">#333333</color>
+    <color name="btn_logut_bg">#ff6861</color>
+
+
+
+</resources>

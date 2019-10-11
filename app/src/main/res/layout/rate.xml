@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Load the toolbar here -->
+    <include
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="0dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        >
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rd_rate"
+        android:checkedButton="@id/good">
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:textColor="@color/colorAccent"
+            android:textSize="18sp"
+            android:textStyle="normal"
+            android:layout_marginStart="5dp"
+            android:id="@+id/poor"
+            android:text=" Poor "/>
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:textColor="@color/colorAccent"
+            android:textSize="18sp"
+            android:textStyle="normal"
+            android:layout_marginStart="5dp"
+            android:id="@+id/good"
+            android:text=" Good "/>
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:textColor="@color/colorAccent"
+            android:textSize="18sp"
+            android:textStyle="normal"
+            android:layout_marginStart="5dp"
+            android:id="@+id/vgood"
+            android:text=" Very Good "/>
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:textColor="@color/colorAccent"
+            android:textSize="18sp"
+            android:textStyle="normal"
+            android:layout_marginStart="5dp"
+            android:id="@+id/excellent"
+            android:text=" Excellent "/>
+    </RadioGroup>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/comment"
+        android:inputType="textMultiLine"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:hint="Comment"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SUBMIT"
+        android:id="@+id/submit"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:background="@drawable/shape"
+        android:layout_margin="20dp"
+        />
+</LinearLayout>
+</LinearLayout>
